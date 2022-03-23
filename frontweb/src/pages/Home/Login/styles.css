@@ -1,0 +1,7 @@
+.form-control {
+  background: #fefefe;
+  border: 1px solid #fefefe;
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 48px;
+}
