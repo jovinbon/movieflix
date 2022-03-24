@@ -36,3 +36,13 @@
     line-height: 70px;
   }
 }
+
+@media (min-width: 1200px) {
+  .catalog-title-container h1 {
+    font-size: 40px;
+  }
+
+  .row {
+    margin-top: 18px;
+  }
+}

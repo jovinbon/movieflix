@@ -1,11 +1,12 @@
 import { AxiosRequestConfig } from 'axios';
-import Button from 'components/Button';
 import { useForm } from 'react-hook-form';
+import { Review } from 'types/review';
 import { requestBackend } from 'util/requests';
 import './styles.css';
 
 type urlParams = {
   movieId: string;
+  onInsertUpdatePageReview: (review: Review) => void;
 };
 
 type FormData = {
@@ -13,7 +14,7 @@ type FormData = {
   text: string;
 };
 
-const ReviewForm = ({ movieId }: urlParams) => {
+const ReviewForm = ({ movieId, onInsertUpdatePageReview }: urlParams) => {
   const {
     register,
     handleSubmit,
@@ -25,7 +26,7 @@ const ReviewForm = ({ movieId }: urlParams) => {
     formData.movieId = parseInt(movieId);
 
     const config: AxiosRequestConfig = {
-      method: 'PUT',
+      method: 'POST',
       url: '/reviews',
       data: formData,
       withCredentials: true,
@@ -34,6 +35,7 @@ const ReviewForm = ({ movieId }: urlParams) => {
     requestBackend(config)
       .then((response) => {
         setValue("text", '');
+        onInsertUpdatePageReview(response.data)
         console.log('SUCCESS', response);
       })
       .catch((error) => {

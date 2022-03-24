@@ -3,7 +3,7 @@
   min-height: 70px;
 }
 
-.nav-logo-text {
+.container-fluid h4 {
   color: #000000;
   font-family: 'Open Sans';
   font-style: normal;
@@ -14,19 +14,19 @@
   padding-left: 20px;
 }
 
-
-.btn-logout {
-  display: none;
-}
-/*.btn {
+.div-logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #000000;
+  background-color: #ffc700;
   box-sizing: border-box;
   border-radius: 10px;
   width: 100px;
   height: 30px;
 }
 
-.btn h6 {
+.container-fluid h6 {
   color: #000000;
   font-size: 14px;
-}*/
+}
