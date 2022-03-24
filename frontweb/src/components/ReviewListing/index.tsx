@@ -8,7 +8,7 @@ type ListingReviews = {
 const ReviewListing = ({ reviews }: ListingReviews) => {
   
   return (
-    <div className="container my-4 catalog-container">
+    <div className="reviews-container">
       {reviews?.map(review =>(
         <div className="content-reviews" key={review.id}>
           <h3>{review.user.name}</h3>

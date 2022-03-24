@@ -23,13 +23,13 @@ const Catalog = () => {
   }, []);
 
   return (
-    <div className="container my-4 catalog-container">
-      <div className="row catalog-title-container">
-        <h1>Lista de filmes</h1>
+    <div className="catalog-container">
+      <div className="catalog-title-container">
+        <h1>Tela listagem de filmes</h1>
       </div>
       {page?.content.map(movie => (
         <div className="row" key={movie.id}>
-          <Link to={`/movies/${movie.id}/reviews`}>
+          <Link to={`/movies/${movie.id}`}>
             <MovieCard movie={movie}/>
           </Link>
         </div>

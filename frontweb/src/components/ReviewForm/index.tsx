@@ -2,6 +2,7 @@ import { AxiosRequestConfig } from 'axios';
 import Button from 'components/Button';
 import { useForm } from 'react-hook-form';
 import { requestBackend } from 'util/requests';
+import './styles.css';
 
 type urlParams = {
   movieId: string;
@@ -58,7 +59,9 @@ const ReviewForm = ({ movieId }: urlParams) => {
           </div>
         </div>
         <div className="button-review">
-          <Button text="SALVAR AVALIAÇÃO" />
+          <button className="btn">
+            <h2>SALVAR AVALIAÇÃO</h2> 
+          </button>
         </div>
       </form>
     </div>
