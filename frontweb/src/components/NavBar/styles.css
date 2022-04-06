@@ -16,17 +16,36 @@
 
 .div-logout {
   display: flex;
-  justify-content: center;
+  padding: 5px 10px;
   align-items: center;
+  text-align: center;
   border: 1px solid #000000;
   background-color: #ffc700;
   box-sizing: border-box;
   border-radius: 10px;
   width: 100px;
-  height: 30px;
 }
 
 .container-fluid h6 {
   color: #000000;
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+@media (min-width: 1200px) {
+  .div-logout {
+    margin-right: 100px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .div-logout {
+    margin-right: 180px;
+  }
+}
+
+@media (min-width: 1080px) {
+  .div-logout {
+    margin-right: 260px;
+  }
 }

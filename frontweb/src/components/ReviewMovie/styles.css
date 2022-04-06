@@ -1,0 +1,121 @@
+.review-movie-card {
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  justify-items: left;
+}
+
+.review-image-container {
+  padding: 16px 0;
+}
+
+.review-image-container img {
+  height: 165px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.review-card-container {
+  width: 100%;
+  margin: none;
+}
+
+.review-card-container h2 {
+  display: flex;
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.review-card-container h3 {
+  font-style: normal;
+  font-weight: bold;
+  color: #ffc700;
+}
+
+.review-card-container h4 {
+  font-style: normal;
+  color: #ffffff;
+}
+
+.card-synopse-container {
+  margin-top: 16px;
+  padding: 13px;
+  border-radius: 10px;
+  border: 1px solid #e1e1e1;
+}
+
+.card-synopse-container p {
+  color: #9e9e9e;
+  font-size: 16px;
+}
+
+@media (min-width: 576px) {
+  .review-image-container img {
+    height: 312px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .review-movie-card {
+    padding: 40px;
+  }
+
+  .review-image-container img {
+    height: 383px;
+    margin-bottom: 19px;
+  }
+
+  .review-card-container h2 {
+    font-size: 36px;
+  }
+
+  .review-card-container h3 {
+    font-size: 30px;
+  }
+
+  .review-card-container h4 {
+    font-size: 30px;
+  }
+
+  .card-synopse-container p {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .review-image-container {
+    padding: 0 152px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .review-movie-card {
+    display: flex;
+    padding-top: 40px
+  }
+
+  .review-image-container {
+    padding: 0 10px;
+  }
+
+  .review-image-container img {
+    width: 500px;
+    height: 254px;
+    margin-bottom: 80px;
+    padding-right: 20px;
+  }
+
+  .review-text-container {
+    margin-right: 10px;
+  }
+
+  .review-card-container h3 {
+    font-size: 24px;
+  }
+
+  .review-card-container h4 {
+    font-size: 24px;
+  }
+}

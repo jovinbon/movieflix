@@ -34,11 +34,25 @@
   color: #000000;
 }
 
-@media (min-width: 1200px) {
+
+@media (min-width: 768px) {
+  .detail-review {
+    padding: 40px;
+  }
+}
+
+@media (min-width: 992px) {
   .button-review {
     width: 500px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .button-review {
+    width: 500px;
   }
 
   .button-review h2 {

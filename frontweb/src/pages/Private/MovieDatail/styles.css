@@ -22,3 +22,20 @@
   }
 }
 
+@media (min-width: 1400px) {
+  .home-details-movie {
+    padding: 40px 140px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .home-details-movie {
+    padding: 40px 400px;
+  }
+}
+
+@media (min-width: 2080px) {
+  .home-details-movie {
+    padding: 40px 640px;
+  }
+}

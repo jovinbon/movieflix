@@ -1,8 +1,10 @@
 import { AxiosRequestConfig } from 'axios';
 import ReviewForm from 'components/ReviewForm';
 import ReviewListing from 'components/ReviewListing';
+import ReviewMovie from 'components/ReviewMovie';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { Movie } from 'types/movie';
 import { Review } from 'types/review';
 import { hasAnyRole } from 'util/auth';
 import { BASE_URL, requestBackend } from 'util/requests';
@@ -14,6 +16,19 @@ type urlParams = {
 
 const MovieDetail = () => {
   const { movieId } = useParams<urlParams>();
+
+  const [movieReview, setMovieReview] = useState<Movie>();
+
+  useEffect(() => {
+    const config: AxiosRequestConfig = {
+      method: 'GET',
+      url: `${BASE_URL}/movies/${movieId}`,
+      withCredentials: true,
+    };
+    requestBackend(config).then((response) => {
+      setMovieReview(response.data);
+    });
+  }, [movieId]);
 
   const [reviews, setReviews] = useState<Review[]>([]);
 
@@ -36,16 +51,14 @@ const MovieDetail = () => {
   }
 
   return (
-    <>
       <div className="home-details-movie">
-        <h1>Id filme {movieId}</h1>
+        {movieReview ? <ReviewMovie movie={movieReview} /> : null}
         {hasAnyRole(['ROLE_MEMBER']) && (
           <ReviewForm movieId={movieId} onInsertUpdatePageReview={handleInserUpdatePageReview} />
           )}
 
         <ReviewListing reviews={reviews} />
       </div>
-    </>
   );
 };
 

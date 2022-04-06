@@ -3,23 +3,6 @@
   color: #ffffff;
 }
 
-.catalog-title-container h1 {
-  font-size: 25px;
-  font-weight: bold;
-  font-style: normal;
-  letter-spacing: -0.015em;
-  margin-bottom: 70px;
-}
-
-.row {
-  margin-top: 12px;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 25px;
-  letter-spacing: -0.015em;
-}
-
 @media (min-width: 1200px) {
   .catalog-container {
     padding: 48px;
@@ -29,20 +12,10 @@
     font-size: 48px;
     line-height: 65px;
   }
-
-  .row {
-    margin-top: 24px;
-    font-size: 24px;
-    line-height: 70px;
-  }
 }
 
 @media (min-width: 1200px) {
   .catalog-title-container h1 {
     font-size: 40px;
-  }
-
-  .row {
-    margin-top: 18px;
   }
 }
